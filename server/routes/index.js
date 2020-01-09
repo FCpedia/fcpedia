@@ -1,5 +1,8 @@
 const router = require('express').Router()
-const Controller;
+const loginRouter = require('./login')
+
+router.use('/login', loginRouter)
+// const Controller 
 
 // for axios in controllers
 // let axiosAPI = require('../helpers/axios') //taruh di atas file controller
