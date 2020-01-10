@@ -26,7 +26,7 @@ function showPlayerData(id) {
                     <span>shirt number: </span><span>${playerData.shirtNumber}</span> <br>
                     <span>position: </span><span>${playerData.position}</span>
                 </div>
-                <span style="position: fixed; top: 50vh; left: 100px;user-select: none;" class="text-disable">Click anywhere outside the box to close</span>
+                <span style="position: fixed; top: 50vh; left: 100px;user-select: none;" class="text-disable bg-light">Click anywhere outside the box to close</span>
             </div>
         `)
             $('.player-modal').modal()

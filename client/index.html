@@ -10,19 +10,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./login.css">
-    <link rel="stylesheet" href="player.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/team.css">
     <!-- google sign in js -->
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>    
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
     <title>FCpedia</title>
 </head>
 
 <body>
     <!-- navbar -->
-    <header>
+    <header style="z-index: 9999; position: sticky;">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #448348;">
             <div class="container">
                 <a class="navbar-brand" href="#"><strong>FCPEDIA</strong></a>
@@ -49,8 +50,8 @@
         </nav>
     </header>
 
-  
-  
+
+
     <!-- login div -->
     <div class="login-page">
         <!-- Title Page -->
@@ -74,21 +75,75 @@
 
     <!-- after login page -->
     <div class="after-login">
-        <!-- this is your content --> <!-- adding team to this div -->
-          <!-- team -->
-    <div class="club-info">
-        <div id="club-name"></div>
-        <div id="club-crest"></div>
-        <div id="club-data"><ul></ul></div>
-        <div id="club-squad"><ul></ul></div>
-        <div id="club-youtube"><ul></ul></div>
-    </div>
-    <!-- team -->
+        <!-- this is your content -->
+        <!-- adding team to this div -->
+        <!-- after login to main page -->
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="">FCPedia</a>
+                    </li>
+                    <li>
+                        <a href="" id="laliga">Laliga</a>
+                    </li>
+                    <li>
+                        <a href="" id="premier">Premier League</a>
+                    </li>
+                    <li>
+                        <a href="" id="bundes">Bundes Lieague</a>
+                    </li>
+                    <li>
+                        <a href="" id="seriea">Serie A</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!-- Here is the image loaded by id testing -->
+                        <div class="col-lg-12" id="bundesData"></div>
+                        <div class="col-lg-12" id="laligaData"></div>
+                        <div class="col-lg-12" id="serieaData"></div>
+                        <div class="col-lg-12" id="premierData"></div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+
+        <!-- after login to main page close -->
+        <!-- team -->
+        <div class="club-info">
+
+            <div class="media">
+                <img class="align-self-center mr-3" alt="Club crest" id="club-crest">
+                <div class="media-body">
+                    <div id="club-name"></div>
+                    <div id="club-data">
+                        <table></table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-8" id="club-squad"></div>
+
+            <div id="club-youtube">
+                <ul></ul>
+            </div>
+        </div>
+        <!-- team -->
     </div>
     <!--  -->
-      <!-- players session -->
+    <!-- players session -->
     <!-- Large Player modal -->
-    <button type="button" class="btn btn-primary" id="toggle-player" onclick="showPlayerData(89)">nama player</button>
+    <!-- <button type="button" class="btn btn-primary" id="toggle-player" onclick="showPlayerData(89)">nama player</button> -->
 
     <div class="modal fade player-modal mt-5" tabindex="-1" role="dialog" aria-labelledby="Player" aria-hidden="true">
         <div class="modal-dialog modal-md">
@@ -116,11 +171,10 @@
     <!-- axios js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.min.js"></script>
     <!-- own js -->
-    <script src="main.js"></script>
-
-  
-    <script src="login.js"></script>
-    <script src="player.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/login.js"></script>
+    <script src="script/player.js"></script>
+    <script src="script/main_page.js"></script>
 
 </body>
 

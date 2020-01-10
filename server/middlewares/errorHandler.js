@@ -1,6 +1,6 @@
 module.exports = function(error, req, res, next){
     console.log(error);
-    console.log(JSON.stringify(error, null, 2));
+    // console.log(JSON.stringify(error, null, 2));
 
 
     let statusCode;
