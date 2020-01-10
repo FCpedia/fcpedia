@@ -2,7 +2,10 @@ const router = require('express').Router()
 const playerRouter = require('./players')
 const loginRouter = require('./login')
 const teamRouter = require('./teams')
-const ytrouter = require('./youtube');
+const ytrouter = require('./youtube')
+const clubRouter = require('./club')
+// const axios = require('axios')
+// const Controller;
 
 // for axios in controllers
 // let axiosAPI = require('../helpers/axios') //taruh di atas file controller
@@ -26,5 +29,7 @@ router.use('/youtube', ytrouter);
 router.use('/players', playerRouter)
 
 router.use('/teams', teamRouter)
+
+router.use('/clubs', clubRouter)
 
 module.exports = router
