@@ -4,7 +4,7 @@ class TeamController
 {
     static getAllTeamsByArea(req,res)
     {
-        axiosAPI(`/teams?areas=${req.query.areas|| ""}`)
+        axiosAPI(`teams?areas=${req.query.areas|| ""}`)
         .then(({data}) => {
             res.status(200).send(data.teams)
         })
@@ -15,7 +15,7 @@ class TeamController
 
     static getTeamById(req,res)
     {
-        axiosAPI(`/teams/${req.params.id}`)
+        axiosAPI(`teams/${req.params.id}`)
         .then(({data}) => {
             res.status(200).send(data)
         })
