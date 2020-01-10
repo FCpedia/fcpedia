@@ -9,10 +9,14 @@
         content="1062880932486-is6hpvij0268ug0dl4hf57ajnjlfr7js.apps.googleusercontent.com">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="player.css">
     <!-- google sign in js -->
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>    
+
     <title>FCpedia</title>
 </head>
 
@@ -65,11 +69,30 @@
         <!-- background video -->
     </div>
 
+
     <!-- after login page -->
     <div class="after-login">
         <!-- this is your content -->
     </div>
     <!--  -->
+      <!-- players session -->
+    <!-- Large Player modal -->
+    <button type="button" class="btn btn-primary" id="toggle-player" onclick="showPlayerData(89)">nama player</button>
+
+    <div class="modal fade player-modal mt-5" tabindex="-1" role="dialog" aria-labelledby="Player" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div id="player-data">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Large Player modal close -->
+    <!-- sandbox -->
+    <!-- sandbox -->
+    <!-- Players session -->
+
     <!-- bootstrap js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -82,7 +105,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.min.js"></script>
     <!-- own js -->
     <script src="main.js"></script>
+
+  
     <script src="login.js"></script>
+    <script src="player.js"></script>
+
 </body>
 
 </html>
