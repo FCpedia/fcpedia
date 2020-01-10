@@ -2,15 +2,13 @@ const axiosAPI = require('../helpers/axios');
 
 class AreaController
 {
-    static getAllAreas(req,res)
+    static getAllAreas(req,res,next)
     {
         axiosAPI(`areas`)
         .then(({data}) => {
             res.send(data.areas)
         })
-        .catch((err) => {
-            res.status(400).send(err);
-        })
+        .catch(next);
     }
 }
 

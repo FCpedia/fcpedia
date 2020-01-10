@@ -2,6 +2,7 @@ const router = require('express').Router()
 const playerRouter = require('./players')
 const loginRouter = require('./login')
 const teamRouter = require('./teams')
+const ytrouter = require('./youtube');
 
 // for axios in controllers
 // let axiosAPI = require('../helpers/axios') //taruh di atas file controller
@@ -19,6 +20,13 @@ const teamRouter = require('./teams')
 // headers sudah terdaftar sebagai token football-data dan method sebagai get
 
 router.use('/login', loginRouter)
+
+router.get('/teams', TeamController.getAllTeamsByArea);  // GET /teams?areas=<areaID>
+
+router.get('/teams/:id', TeamController.getTeamById); // GET /teams/<teamID>
+
+
+router.use('/youtube', ytrouter);
 
 router.use('/players', playerRouter)
 

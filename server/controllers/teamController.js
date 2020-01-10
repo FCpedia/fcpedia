@@ -1,5 +1,6 @@
 const axiosAPI = require('../helpers/axios');
 
+
 class TeamController {
     static getAllTeamsByArea(req, res, next) {
         axiosAPI(`teams?areas=${req.query.areas || ""}`)
