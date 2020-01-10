@@ -2,8 +2,7 @@ const router = require('express').Router()
 const playerRouter = require('./players')
 const loginRouter = require('./login')
 const teamRouter = require('./teams')
-const ytrouter = require('./youtube');
-const axiosAPI = require('../helpers/axios')
+const ytrouter = require('./youtube')
 const clubRouter = require('./club')
 // const axios = require('axios')
 // const Controller;
