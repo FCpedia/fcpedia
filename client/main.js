@@ -32,7 +32,5 @@ function getTeamById(id)
                 }
             });
         }
-    });
-
-    
+    });   
 }

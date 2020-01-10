@@ -4,7 +4,7 @@ class AreaController
 {
     static getAllAreas(req,res,next)
     {
-        axiosAPI(`/areas`)
+        axiosAPI(`areas`)
         .then(({data}) => {
             res.send(data.areas)
         })
