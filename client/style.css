@@ -39,7 +39,7 @@
 .g-signin2 > div{
     margin: 0 auto;
   }
-  #myVideo {
+#myVideo {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -48,4 +48,9 @@
     min-width: 100%;
     min-height: 100%;
     z-index: -99;
-  }
+}
+.after-login{
+    height: 100vh;
+    width: 100%;
+    background: white;
+}
