@@ -1,6 +1,6 @@
 "use strict"
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
     require('dotenv').config();
 }
 
@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const cors = require('cors');
 const routes = require('./routes');
-const { errorHandler } = require('./middlewares/errorHandler');
+const errorHandler = require('./middlewares/errorHandler');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
