@@ -19,13 +19,11 @@ const router = require('express').Router();
 
 const TeamController = require("../controllers/teamController");
 
-router.get('/teams', (req,res) => {             // GET /teams?areas=<areaID>
-    TeamController.getAllTeamsByArea(req,res);
-});
+router.get('/teams', TeamController.getAllTeamsByArea);  // GET /teams?areas=<areaID>
 
-router.get('/teams/:id', (req,res) => {             // GET /teams/<teamID>
-    TeamController.getTeamById(req,res);
-});
+router.get('/teams/:id', TeamController.getTeamById); // GET /teams/<teamID>
 
+const ytrouter = require('./youtube');
+router.use('/youtube', ytrouter);
 
 module.exports = router
