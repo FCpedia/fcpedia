@@ -10,7 +10,7 @@ class ControllerClub {
     }
 
     static showLaliga(req, res, next){
-        axiosAPI('/competitions/2019/teams')
+        axiosAPI('/competitions/2014/teams')
         .then(({data}) => {
             res.status(200).json(data.teams)
         })
