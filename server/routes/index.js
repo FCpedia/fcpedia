@@ -21,11 +21,6 @@ const ytrouter = require('./youtube');
 
 router.use('/login', loginRouter)
 
-router.get('/teams', TeamController.getAllTeamsByArea);  // GET /teams?areas=<areaID>
-
-router.get('/teams/:id', TeamController.getTeamById); // GET /teams/<teamID>
-
-
 router.use('/youtube', ytrouter);
 
 router.use('/players', playerRouter)
