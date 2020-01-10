@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const playerRouter = require('./players')
+const loginRouter = require('./login')
 const teamRouter = require('./teams')
 
 // for axios in controllers
@@ -17,6 +18,7 @@ const teamRouter = require('./teams')
 // isi url tersebut mengarah ke api yang di tuju, semisal: teams, players
 // headers sudah terdaftar sebagai token football-data dan method sebagai get
 
+router.use('/login', loginRouter)
 
 router.use('/players', playerRouter)
 
