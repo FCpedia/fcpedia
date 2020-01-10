@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const axiosAPI = require('../helpers/axios')
+const clubRouter = require('./club')
 // const axios = require('axios')
 // const Controller;
 
@@ -18,12 +18,6 @@ const axiosAPI = require('../helpers/axios')
 // isi url tersebut mengarah ke api yang di tuju, semisal: teams, players
 // headers sudah terdaftar sebagai token football-data dan method sebagai get
 
-router.get('/coba', (req, res, next) => {
-    axiosAPI('/competitions/2002/teams')
-        .then(({data}) => {
-            res.status(200).json(data.teams)
-        })
-        .catch(next)
-})
+router.use('/clubs', clubRouter)
 
 module.exports = router
