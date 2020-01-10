@@ -1,6 +1,10 @@
-# fcpedia
-
 # FCPedia ( Football Club Wikipedia )
+
+#### List of Public API :
+- adorable avatars
+- football-data
+- youtube-api
+- mediaWiki
 
 #### Getting Started
 
