@@ -14,6 +14,8 @@
     "axios": "^0.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "googleapis": "^46.0.0",
+    "google-auth-library": "^5.8.0",
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
