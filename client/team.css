@@ -117,11 +117,11 @@
 }
 
 .card-img-top{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 160px;
 }
 
-#testing {
+#bundesData, #serieaData, #laligaData, #premierData{
     width: 80vw;
     display: flex;
     flex-flow: row wrap;
@@ -129,6 +129,11 @@
 
 .indexing-card {
     margin: 10px;
-    width: 150px;
-    height: 200px;
+    width: 190px;
+    height: 210px;
+}
+
+h5{
+    text-align: center;
+    font-size: 20px;
 }
