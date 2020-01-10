@@ -4,6 +4,7 @@ const loginRouter = require('./login')
 const teamRouter = require('./teams')
 const ytrouter = require('./youtube');
 const axiosAPI = require('../helpers/axios')
+const clubRouter = require('./club')
 // const axios = require('axios')
 // const Controller;
 
@@ -30,12 +31,6 @@ router.use('/players', playerRouter)
 
 router.use('/teams', teamRouter)
 
-router.get('/coba', (req, res, next) => {
-    axiosAPI('/competitions/2002/teams')
-        .then(({data}) => {
-            res.status(200).json(data.teams)
-        })
-        .catch(next)
-})
+router.use('/clubs', clubRouter)
 
 module.exports = router
