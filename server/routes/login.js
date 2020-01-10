@@ -1,7 +1,5 @@
 const router = require("express").Router()
 const Controller = require('../controllers/login')
 
-router.get('/', (req, res) => {
-    res.send("ini halaman login")
-})
+router.post('/', Controller.login)
 module.exports = router
