@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 200px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+
+            .sidenav a {
+                padding: 6px 6px 6px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+            }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            .main {
+                margin-left: 200px; /* Same as the width of the sidenav */
+            }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="sidenav">
+            <a id="premier">Premier League</a>
+            <a id="bundes">BundesLiga</a>
+            <a >La Liga</a>
+            <a >Serie A</a>
+            
+        </div>
+
+        <div class="main">
+        <h2>Sidenav Example</h2>
+        <p>This sidenav is always shown.</p>
+        <div id="testing"></div>
+        </div>
+
+        
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                $('#premier').on('click', function(el) {
+                    $('.main').hide()
+                    el.preventDefault()
+                })
+                getTeamName()
+            })
+function getTeamName() {
+    
+    $.ajax({
+        url: 'http://localhost:3000/coba',
+        method: 'GET'
+    })
+    .done(data=>{
+        data.forEach(element => {
+            $('#testing').append(`
+            <p>${element.name}</p>
+            <img scr="${element.image}" alt=${element.name}/>
+            `)
+            
+        });
+    })
+    .fail()
+    .always()
+}
+        </script>
+    </body>
+</html> 
