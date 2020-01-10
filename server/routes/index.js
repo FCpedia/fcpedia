@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const teamRouter = require('./teams')
 
 // for axios in controllers
 // let axiosAPI = require('../helpers/axios') //taruh di atas file controller
@@ -15,17 +16,8 @@ const router = require('express').Router();
 // isi url tersebut mengarah ke api yang di tuju, semisal: teams, players
 // headers sudah terdaftar sebagai token football-data dan method sebagai get
 
-// router.use('/', Controller)
+router.use('/teams', teamRouter)
 
-const TeamController = require("../controllers/teamController");
-
-router.get('/teams', (req,res) => {             // GET /teams?areas=<areaID>
-    TeamController.getAllTeamsByArea(req,res);
-});
-
-router.get('/teams/:id', (req,res) => {             // GET /teams/<teamID>
-    TeamController.getTeamById(req,res);
-});
 
 
 module.exports = router
