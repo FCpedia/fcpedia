@@ -1,0 +1,6 @@
+JWT_SECRET=inirahasia
+GOOGLE_CLIENT_ID=1062880932486-is6hpvij0268ug0dl4hf57ajnjlfr7js.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=l9GmeeyGKZMMJiEixp7zsBfn
+FOOTBALL_API={taruh token FOOTBALL_API disini}
+YOUTUBE_API=AIzaSyC9Gt9b4EHBCmXqYFccJLitConjoyHf4UI
+(YOUTUBE_API[cadangan])=AIzaSyCLq_QybqQc4feb1zMZnTp0AfJXO12wvZQ

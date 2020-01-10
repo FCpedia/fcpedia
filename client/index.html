@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-client_id"
+        content="1062880932486-is6hpvij0268ug0dl4hf57ajnjlfr7js.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/team.css">
+    <!-- google sign in js -->
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+    <title>FCpedia</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <header style="z-index: 9999; position: sticky;">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #448348;">
+            <div class="container">
+                <a class="navbar-brand" href="#"><strong>FCPEDIA</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto user-data">
+                        <!-- nav link -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle prof-username" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Username
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="" onclick="signOut()">Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- login div -->
+    <div class="login-page">
+        <!-- Title Page -->
+        <h1 class="logo-brand"><em>FCPEDIA</em></h1>
+        <p class="sub-logo">FootBall Club Wikipedia</p>
+        <!--  -->
+        <!-- form login -->
+        <div class="card login-form">
+            <h4 class="mb-3" align="center">Sign In</h4>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-width="300" data-height="50" data-longtitle="true">
+            </div>
+        </div>
+        <!--  -->
+        <!-- background video -->
+        <video autoplay muted loop id="myVideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <!-- background video -->
+    </div>
+
+
+    <!-- after login page -->
+    <div class="after-login">
+        <!-- this is your content -->
+        <!-- adding team to this div -->
+        <!-- after login to main page -->
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="">FCPedia</a>
+                    </li>
+                    <li>
+                        <a href="" id="laliga">Laliga</a>
+                    </li>
+                    <li>
+                        <a href="" id="premier">Premier League</a>
+                    </li>
+                    <li>
+                        <a href="" id="bundes">Bundes Lieague</a>
+                    </li>
+                    <li>
+                        <a href="" id="seriea">Serie A</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!-- Here is the image loaded by id testing -->
+                        <div class="col-lg-12" id="bundesData"></div>
+                        <div class="col-lg-12" id="laligaData"></div>
+                        <div class="col-lg-12" id="serieaData"></div>
+                        <div class="col-lg-12" id="premierData"></div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+
+        <!-- after login to main page close -->
+        <!-- team -->
+        <div class="club-info">
+
+            <div class="media">
+                <img class="align-self-center mr-3" alt="Club crest" id="club-crest">
+                <div class="media-body">
+                    <div id="club-name"></div>
+                    <div id="club-data">
+                        <table></table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-8" id="club-squad"></div>
+
+            <div id="club-youtube">
+                <ul></ul>
+            </div>
+        </div>
+        <!-- team -->
+    </div>
+    <!--  -->
+    <!-- players session -->
+    <!-- Large Player modal -->
+    <!-- <button type="button" class="btn btn-primary" id="toggle-player" onclick="showPlayerData(89)">nama player</button> -->
+
+    <div class="modal fade player-modal mt-5" tabindex="-1" role="dialog" aria-labelledby="Player" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div id="player-data">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Large Player modal close -->
+    <!-- sandbox -->
+    <!-- sandbox -->
+    <!-- Players session -->
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- axios js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.min.js"></script>
+    <!-- own js -->
+    <script src="script/main.js"></script>
+    <script src="script/login.js"></script>
+    <script src="script/player.js"></script>
+    <script src="script/main_page.js"></script>
+
+</body>
+
+</html>
